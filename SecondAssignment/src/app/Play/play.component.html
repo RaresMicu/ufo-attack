@@ -1,0 +1,18 @@
+<div id="game-screen">
+  <div class="time-score-div">
+    <p class="font-time-score">Time left</p>
+    <p id="time-left">{{ countdown }}</p>
+    <p class="font-time-score">Score</p>
+    <p id="score">{{ score }}</p>
+  </div>
+  <p id="game-over">{{ gameover }}</p>
+  <img src="../../assets/imgs/rocket.png" alt="^" id="rocket" #rocket />
+  <ng-container *ngFor="let index of ufoRange; let ufoIndex = index">
+    <img
+      #ufo
+      class="UFO"
+      [id]="'UFO' + (ufoIndex + 1)"
+      src="../../assets/imgs/ufo.png"
+    />
+  </ng-container>
+</div>

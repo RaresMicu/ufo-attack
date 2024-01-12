@@ -1,0 +1,26 @@
+<div class="cardBox">
+  <form (ngSubmit)="savePreferences()" class="fieldset">
+    <legend class="preferences-title">Preferences</legend>
+    <div class="preferences">
+      <div>
+        <label for="UFOs" class="UFOs">Number of UFOs:</label>
+        <select id="UFOs" [(ngModel)]="selectedUFOs" name="selectedUFOs">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div>
+        <label for="time" class="time">Time (seconds):</label>
+        <select id="time" [(ngModel)]="selectedTime" name="selectedTime">
+          <option value="60">60</option>
+          <option value="120">120</option>
+          <option value="180">180</option>
+        </select>
+      </div>
+    </div>
+    <button type="submit" class="button">Save</button>
+  </form>
+</div>

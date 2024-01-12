@@ -1,0 +1,104 @@
+#game-screen {
+  position: absolute;
+  top: 72px;
+  right: 0px;
+  width: 100vw;
+  height: 90.5vh;
+  background-color: rgb(16, 1, 27);
+}
+
+.time-score-div {
+  position: fixed;
+  left: 40px;
+  bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(195, 189, 106);
+  border: rgb(36, 29, 228) 2px solid;
+}
+
+#score {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  margin-top: 0px;
+  width: 100px;
+  height: fit-content;
+  background-color: rgb(36, 29, 228);
+  color: wheat;
+  border-radius: 7px;
+  font-style: italic;
+}
+
+#time-left {
+  margin-top: -10px;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.font-time-score {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(7, 5, 64);
+  font-style: italic;
+  margin-top: 0px;
+}
+
+.UFO {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+}
+
+.hit-ufo {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+#UFO1 {
+  top: 0px;
+  left: 0px;
+}
+
+#UFO2 {
+  top: 55px;
+  left: 0px;
+}
+
+#UFO3 {
+  top: 110px;
+  left: 300px;
+}
+
+#UFO4 {
+  top: 165px;
+  left: 200px;
+}
+
+#UFO5 {
+  top: 220px;
+  left: 100px;
+}
+
+#rocket {
+  position: absolute;
+  width: 120px;
+  height: 90px;
+  bottom: 0px;
+  left: 720px;
+}
+
+#game-over {
+  position: absolute;
+  top: 200px;
+  left: 600px;
+  color: wheat;
+  font-size: 72px;
+}

@@ -1,0 +1,35 @@
+<div class="cardBox" id="cardBox">
+  <form id="registrationForm" class="fieldset" (ngSubmit)="validateInputs()">
+    <legend class="changepass-title">Password change: {{ username }}</legend>
+    <div class="changepass-form">
+      <div>
+        <label for="newpass" class="field">New Pass:</label>
+        <input
+          [(ngModel)]="newPassword"
+          [ngClass]="errorStyle1"
+          type="password"
+          id="password"
+          class="space-between"
+          name="password"
+          placeholder="New Pass"
+          required
+        />
+      </div>
+      <div>
+        <label for="confirmnewpass" class="field">Confirm Pass:</label>
+        <input
+          [(ngModel)]="newPasswordConfirm"
+          [ngClass]="errorStyle2"
+          type="password"
+          id="confpassword"
+          class="space-between"
+          name="confpassword"
+          placeholder="Confirm Pass"
+          required
+        />
+      </div>
+    </div>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    <button class="button" id="change">Send</button>
+  </form>
+</div>

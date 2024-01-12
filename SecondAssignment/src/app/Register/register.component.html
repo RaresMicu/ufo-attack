@@ -1,0 +1,61 @@
+<div class="cardBox" id="cardBox">
+  <form id="registrationForm" class="fieldset" (ngSubmit)="validateInputs()">
+    <legend class="register-title">Register new user</legend>
+    <div class="register-form">
+      <div>
+        <label for="user" class="field">User:</label>
+        <input
+          [(ngModel)]="username"
+          [ngClass]="errorStyle1"
+          type="text"
+          id="username"
+          class="space-between"
+          name="username"
+          placeholder="User identifier"
+          required
+        />
+      </div>
+      <div>
+        <label for="email" class="field">Email:</label>
+        <input
+          [(ngModel)]="email"
+          [ngClass]="errorStyle2"
+          type="email"
+          id="email"
+          class="space-between"
+          name="email"
+          placeholder="Email"
+          required
+        />
+      </div>
+      <div>
+        <label for="password" class="field">Password:</label>
+        <input
+          [(ngModel)]="password"
+          [ngClass]="errorStyle3"
+          type="password"
+          id="password"
+          class="space-between"
+          name="password"
+          placeholder="Password"
+          required
+        />
+      </div>
+      <div>
+        <label for="repeat-password" class="field">Repeat password:</label>
+        <input
+          [(ngModel)]="repeatPassword"
+          [ngClass]="errorStyle4"
+          type="password"
+          id="repeat-password"
+          class="space-between"
+          name="repeat-password"
+          placeholder="Repeat password"
+          required
+        />
+      </div>
+    </div>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    <button class="button" id="register">Register</button>
+  </form>
+</div>

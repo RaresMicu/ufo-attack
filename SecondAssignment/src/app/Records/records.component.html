@@ -1,0 +1,57 @@
+<div class="cardBox">
+  <fieldset class="fieldset">
+    <legend class="records-title">Records</legend>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>User</th>
+            <th>Points</th>
+            <th>UFOs</th>
+            <th>Seconds</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="records">
+          <tr *ngFor="let record of records; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ record.username }}</td>
+            <td>{{ record.punctuation }}</td>
+            <td>{{ record.ufos }}</td>
+            <td>{{ record.disposedTime }}</td>
+            <td>{{ record.recordDate | date : "dd/MM/yyyy" }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </fieldset>
+  <fieldset class="fieldset" *ngIf="tokenService.getIsLogged()">
+    <legend class="records-title">Personal Records</legend>
+    <div *ngIf="tokenService.getIsLogged()" class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>User</th>
+            <th>Points</th>
+            <th>UFOs</th>
+            <th>Secs</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="records">
+          <tr *ngFor="let record of personalRecords; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ record.username }}</td>
+            <td>{{ record.punctuation }}</td>
+            <td>{{ record.ufos }}</td>
+            <td>{{ record.disposedTime }}</td>
+            <td>{{ record.recordDate | date : "dd/MM/yyyy" }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- <button type="submit" (click)="delete()">Delete records</button> -->
+    </div>
+  </fieldset>
+</div>

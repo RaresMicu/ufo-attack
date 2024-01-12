@@ -1,0 +1,52 @@
+<div class="navbar-container">
+  <div class="navbar-logo">
+    <a routerLink="home" routerLinkActive="active"
+      ><img src="../../assets/imgs/ufoLogo.jpg" alt="UFO" class="ufo-size"
+    /></a>
+    <p class="navbar-title">UFO Battle</p>
+  </div>
+  <div class="navbar-links">
+    <a routerLink="home" routerLinkActive="active" class="navbar-link">Home</a>
+    <a routerLink="preferences" routerLinkActive="active" class="navbar-link"
+      >Preferences</a
+    >
+    <a routerLink="play" routerLinkActive="active" class="navbar-link">Play</a>
+    <a routerLink="records" routerLinkActive="active" class="navbar-link"
+      >Records</a
+    >
+    <a routerLink="records" routerLinkActive="active" class="navbar-link"
+      >Records</a
+    >
+    <a
+      *ngIf="isLogged"
+      routerLink="profile"
+      routerLinkActive="active"
+      class="navbar-link"
+      >Profile</a
+    >
+  </div>
+  <div class="navbar-login">
+    <a
+      *ngIf="!isLogged"
+      routerLink="login"
+      routerLinkActive="active"
+      class="navbar-link"
+      >Login</a
+    >
+    <a
+      *ngIf="!isLogged"
+      routerLink="register"
+      routerLinkActive="active"
+      class="navbar-link"
+      >Register</a
+    >
+    <a
+      *ngIf="isLogged"
+      routerLink="home"
+      class="navbar-link"
+      (click)="token.clearData()"
+    >
+      Logout
+    </a>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+.university-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 60%;
+  padding: 20px;
+  background-color: rgb(215, 212, 146);
+  margin-top: 160px;
+}
+
+.logo-size {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+
+.flex-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
+  width: 85%;
+  height: fit-content;
+}
+
+.main-text {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.sub-text {
+  font-size: 28px;
+  font-weight: 900;
+  font-family: "Courier New", Courier, monospace;
+  font-style: italic;
+  margin-top: -30px;
+}
+
+.anormal-text {
+  font-size: 24px;
+  font-style: italic;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  color: rgb(95, 92, 92);
+}
+
+.change-position {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-top: -50px;
+}
+
+.ufo-title {
+  width: 125px;
+  height: 125px;
+  margin: 20px;
+}
